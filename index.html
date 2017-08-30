@@ -1,186 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
 	<head>
 		<title>A2CN</title>
-		<style>
-
-			html {
-			  background:#020;
-			  color:#6c6;
-			  font:13px courier new, fixed;
-			  line-height:16px;
-			  margin:0 5%;
-			  padding:0;
-			  height: 96%;
-			  border:5px dotted #242;
-			  border-width:0 5px; }
-
-			body {
-			  padding:0 40px;
-			  height: 96%;
-			  border:5px dashed #242;
-			  border-top:5px solid transparent;
-			  border-bottom:5px solid transparent; }
-
-			h1, h2, h3, ul, li, p, b {
-			  margin:0; padding:0; }
-
-			a:link, a:visited {
-			  color:#aea;
-			  text-decoration:none;
-			  padding:0 3px; }
-
-			a:visited { color:#6a6; }
-
-			a:hover {
-			  color:black;
-			  background:#696; }
-
-			a:focus {
-			  color:black;
-			  background:#696;
-			  outline:none }
-
-			h2 {
-			  margin:24px 0 24px 0;
-			  font:400% impact, courier new, fixed;
-			  color:#fefefe;
-			  text-align:center; }
-
-
-			h2+b {
-			  display:block;
-			  font-size:10px;
-			  color:#595;
-			  font-weight:bold;
-			  text-align:center; }
-
-			h3 {
-			  font-size:11px;
-			  font-weight:normal;
-			  text-align:right;
-			  margin:20pt 0 10pt;
-			  padding:3px 5px;
-			  color:#ac6;
-			  background:#001c00;
-			  border:15px solid #001400;
-			  border-width:5px 3px 10px 15px; }
-
-			li {
-			  list-style-type:square;
-			  margin-bottom:13px; }
-
-			pre {
-			  color:#696;
-			  font-size:11px;
-			  line-height:14px; }
-
-			div { margin-top:15px; }
-
-			.irc {
-				border: 1px dashed;
-			}
-		</style>	
-
-<script>
-function getNextDay(day, resetTime){
-  var days = {
-    sunday: 0, monday: 1, tuesday: 2,
-    wednesday: 3, thursday: 4, friday: 5, saturday: 6
-  };
-
-  var dayIndex = days[day.toLowerCase()];
-  if (!dayIndex) {
-    throw new Error('"' + day + '" is not a valid input.');
-  }
-
-  var returnDate = new Date();
-  var returnDay = returnDate.getDay();
-  if (dayIndex !== returnDay) {
-    returnDate.setDate(returnDate.getDate() + (dayIndex + (7 - returnDay)) % 7);
-  }
-
-  if (resetTime) {
-    returnDate.setHours(19);
-    returnDate.setMinutes(0);
-    returnDate.setSeconds(0);
-    returnDate.setMilliseconds(0);
-  }
-  return returnDate;
-}
-
-</script>
+    <meta charset="utf-8">
+		
+    <link rel="stylesheet" type="text/css" href="style.css">
+		<script main="src.js" type="text/javascript"></script>
 	</head>
 
 	<body>
-	<marquee>+++ <b>N&auml;chstes Treffen: <script>document.write(getNextDay('tuesday', true));</script></b> +++ 14. bis 17.04.2017 Easterhegg in Frankfunrt a.M. +++ 25. bis 28.05.2017 Gulaschprogrammiernacht Karlsruhe +++ 04. bis 08.08.2017 SHA17 Camp in Zeewolde Niederlande ++++</marquee>	
-	<center><h1></h1><img src="a2cnlogo.svg" alt="a2cn" style="width:304px;"></sup>
-<p>
-			Wir sind der lokale Hackspace/Hackertreff an der Hochschule in Aalen.<br />
-			Wir treffn uns <b>Dienstags um 18h im "Aquarium"</b> gegen&uuml;ber des Haupteinganges von G2 im Burren <b>(G2 0.28)</b>.</br><br />
-KEIN treffen in der Vorlesungsfreien Zeit</br>
-Mailingliste:<br />
-<!--<a href="mailto:noreply@lists.a2cn.de">noreply@lists.a2cn.de</a></br>-->
-public@lists.a2cn.de<br />
-<a href="https://lists.a2cn.de/listinfo/public">Der Mailingliste beitreten.</a></br>
-<p>Bei jedem Treffen gibt es einen kleinen Vortrag, in der Regel &uuml;ber IT oder irgend etwas anderes.</p>
-<br />
-<div class="irc">
-IRC<br />
-====<br />
+    <p class="marquee">
+      <span>+++ 01. bis 03.09.2017 MRMCD in Darmstadt +++ 07. bis 10.09.2017 Hacken Open Air 2::17 in Peine +++ 06. bis 08.10.2017 \HACK\OVER\1.7 in Hannover +++</span>
+    </p>
 
-Hauptkommunikationskannal ist der irc channel <b>#a2cn</b> auf freenode.<br />
-Wir verschl&uuml;sseln im chat mit hilfe einer angepassenten Version von FiSH: https://gitlab.com/franzt1/ircCrypto<br />
-Joint einfach erstmal ohne verschl&uuml;sselung auf den Channel wenn ihr neu seit. <br />
-<br />
-</p>
-<iframe src="https://kiwiirc.com/client/irc.freenode.com/#a2cn" width="65%" height="400px"></iframe>
-</div>
-<p>
-<br />
-
-
-<u>Aktuelles:</u>
-<ul>
-	<li><b>N&auml;chstes Treffen: <script>document.write(getNextDay('tuesday', true));</script></b>
- </li>
-	<li>14. bis 17.04.2017 Easterhegg in Frankfunrt a.M.</li> 
-	<li>25. bis 28.05.2017 Gulaschprogrammiernacht Karlsruhe</li> 	
-	<li>04. bis 08.08.2017 SHA17 Camp in Zeewolde Niederlande</li>
-</ul>
-</p>
-		</center>
-<small><a style="color: #002200" href="https://jagger.me">jaggers blog</a></small>
-<div class="w3-content w3-display-container">
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-
-  <img class="mySlides" src="img/noeasy.jpg" title="hackme.html" alt="hackme.html" style="width:100%">
-  <img class="mySlides" src="img/cobalt4.jpg " style="width:100%">
-  <img class="mySlides" src="img/rms6.png" style="width:100%">
-  <img class="mySlides" src="img/urhackername.jpg" style="width:100%">
-  <img class="mySlides" src="img/vim222.png" style="width:100%">
-  <img class="mySlides" src="img/pee.jpg" style="width:100%">
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
+  	<center>
+      <img src="a2cnlogo.svg" alt="a2cn" style="width:304px;">
+      <p>
+    		Wir sind der lokale Hackspace an der Hochschule Aalen, ein chaosnaher Zusammenschluss von Hackern, Haecksen und Interessierten.
+        <br><br>
+    		Wir finden <b>Dienstags ab 18:00</b> im "Aquarium" gegenüber des Haupteinganges von G2 auf dem Campusteil Burren zusammen.
+        <br>
+        (Es gibt KEINE offiziellen Treffen in der vorlesungsfreien Zeit!)
+        <br><br>
+        Unsere Abende bieten neben dem gemütlichen Austausch meist auch ein kleines Vortragsprogramm, in dessen Rahmen Teilnehmer von ihren Projekten und letzten Errungenschaften berichten, oder über verschiedenste informatische sowie technische Themen sprechen.
+      </p>
+      <br>
+      <div class="irc">
+        <br>
+        <p>
+          IRC<br>
+          ====<br>
+          Unser Hauptkommunikationskanal ist der <b>#a2cn</b> IRC Channel auf Freenode.<br>
+          Wir verschlüsseln im Chat mit Hilfe einer angepassenten Version von FiSH: https://gitlab.com/franzt1/ircCrypto<br>
+          Wenn IRC für Dich Neuland ist, joine gern vorerst über diesen simplen Browser-Client!<br>
+          <br>
+        </p>
+        <iframe src="https://kiwiirc.com/client/irc.freenode.com/#a2cn" width="65%" height="400px"></iframe>
+        <br><br>
+      </div>
+    
+      <p>
+        <br>
+        <u>Aktuelles:</u>
+        <br><br>
+        <ul>
+        	<!-- <li><b>N&auml;chstes Treffen: <script>document.write(getNextDay('tuesday', true));</script></b> </li> -->
+        	<li>01. bis 03.09.2017 <a href="https://2017.mrmcd.net/" target="_blank">MRMCD</a> in Darmstadt</li> 
+        	<li>07. bis 10.09.2017 <a href="https://hackenopenair.de/" target="_blank">Hacken Open Air 2::17</a> in Peine</li> 	
+        	<li>06. bis 08.10.2017 <a href="https://hackover.de/" target="_blank">\HACK\OVER\1.7</a> in Hannover</li>
+        </ul>
+      </p>
+  	</center>
 	</body>
 </html>
